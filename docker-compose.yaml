@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    image: ghcr.io/rudyares/mind-map-web:v0.0.1
+    build:
+      context: .
+      dockerfile: docker-compose.dockerfile
+    container_name: mind-map-web
+    restart: always
+    ports:
+      - "7788:8080"
